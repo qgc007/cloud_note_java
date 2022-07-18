@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kebab.cloud_note_java.mapper.TbUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.kebab.cloud_note_java.pojo.TbUser">
+            <id property="uId" column="u_id" jdbcType="OTHER"/>
+            <result property="uMail" column="u_mail" jdbcType="VARCHAR"/>
+            <result property="uName" column="u_name" jdbcType="VARCHAR"/>
+            <result property="uPwd" column="u_pwd" jdbcType="VARCHAR"/>
+            <result property="uLevel" column="u_level" jdbcType="CHAR"/>
+            <result property="uGendar" column="u_gendar" jdbcType="CHAR"/>
+            <result property="uAddress" column="u_address" jdbcType="VARCHAR"/>
+            <result property="uPhone" column="u_phone" jdbcType="VARCHAR"/>
+            <result property="uAvatar" column="u_avatar" jdbcType="VARCHAR"/>
+            <result property="uCreateTime" column="u_create_time" jdbcType="TIMESTAMP"/>
+            <result property="uUpdateTime" column="u_update_time" jdbcType="TIMESTAMP"/>
+            <result property="uDelFlag" column="u_del_flag" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        u_id,u_mail,u_name,
+        u_pwd,u_level,u_gendar,
+        u_address,u_phone,u_avatar,
+        u_create_time,u_update_time,u_del_flag
+    </sql>
+</mapper>
