@@ -18,13 +18,13 @@ public class TbUserBlog implements Serializable {
     /**
      * user id
      */
-    @TableId
+    //@TableId(type = IdType.INPUT)
     private Object uId;
 
     /**
      * blog id
      */
-    @TableId
+    @TableId(type = IdType.INPUT)
     private String bId;
 
     /**
