@@ -2,6 +2,9 @@ package com.kebab.cloud_note_java.mapper;
 
 import com.kebab.cloud_note_java.pojo.TbUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
 * @author shin
@@ -10,7 +13,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @Entity com.kebab.cloud_note_java.pojo.TbUser
 */
 public interface TbUserMapper extends BaseMapper<TbUser> {
-
+    List<TbUser> getAllByUMailAndUPwd(@Param("mail") String mail, @Param("pwd") String password);
 }
 
 

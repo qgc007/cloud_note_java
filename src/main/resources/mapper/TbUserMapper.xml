@@ -25,4 +25,12 @@
         u_address,u_phone,u_avatar,
         u_create_time,u_update_time,u_del_flag
     </sql>
+    <select id="getAllByUMailAndUPwd" resultType="com.kebab.cloud_note_java.pojo.TbUser">
+        select * from tb_user
+        <where>
+        <if test="mail != null and pwd != null">
+                u_mail = #{mail} and u_pwd = #{pwd}
+        </if>
+        </where>
+    </select>
 </mapper>
