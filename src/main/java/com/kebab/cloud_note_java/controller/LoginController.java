@@ -21,9 +21,13 @@ public class LoginController {
      */
     @RequestMapping("/sign_in")
     public  Result userSignIn(@RequestBody(required=true)TbUser user){
+        System.out.println("---------------------login start----------------");
+        System.out.println(user.getUMail());
         TbUser tbUserParam = user;
-        String md5Str = DigestUtils.md5DigestAsHex(tbUserParam.getUPwd().getBytes());
-        TbUser tbUser = tbUserServiceImpl.query().eq("u_mail",tbUserParam.getUMail()).eq("u_pwd", md5Str).one();
+        //String md5Str = DigestUtils.md5DigestAsHex(tbUserParam.getUPwd().getBytes());
+        TbUser tbUser = tbUserServiceImpl.query().eq("u_mail",tbUserParam.getUMail()).eq("u_pwd", user.getUPwd()).one();
+        System.out.println(tbUser.getUName());
+        System.out.println("---------------------login end----------------");
         return  new Result(Result.Code.OK, null,"登录成功");
     }
 
