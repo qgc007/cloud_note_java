@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kebab.cloud_note_java.mapper.TbUserBlogMapper">
+
+    <resultMap id="BaseResultMap" type="com.kebab.cloud_note_java.pojo.TbUserBlog">
+            <id property="uId" column="u_id" jdbcType="OTHER"/>
+            <id property="bId" column="b_id" jdbcType="VARCHAR"/>
+            <result property="bTitle" column="b_title" jdbcType="VARCHAR"/>
+            <result property="bTextLink" column="b_text_link" jdbcType="VARCHAR"/>
+            <result property="bRecLevel" column="b_rec_level" jdbcType="VARCHAR"/>
+            <result property="bLikeNum" column="b_like_num" jdbcType="INTEGER"/>
+            <result property="bRecAdmin" column="b_rec_admin" jdbcType="TINYINT"/>
+            <result property="bDelFlag" column="b_del_flag" jdbcType="CHAR"/>
+            <result property="bCreateTime" column="b_create_time" jdbcType="TIMESTAMP"/>
+            <result property="bUpdateTime" column="b_update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        u_id,b_id,b_title,
+        b_text_link,b_rec_level,b_like_num,
+        b_rec_admin,b_del_flag,b_create_time,
+        b_update_time
+    </sql>
+</mapper>
