@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.kebab.cloud_note_java.mapper")
-@EnableMPP
 public class CloudNoteJavaApplication {
 
     public static void main(String[] args) {

@@ -21,15 +21,15 @@ public class TbUserBlog implements Serializable {
     /**
      * user id
      */
-    @TableId(type = IdType.INPUT)
+    //@TableId(type = IdType.INPUT)
     @MppMultiId
+    @TableField("u_id")
     private Object uId;
 
     /**
      * blog id
      */
     @TableId(type = IdType.INPUT)
-    @MppMultiId
     private String bId;
 
     /**
