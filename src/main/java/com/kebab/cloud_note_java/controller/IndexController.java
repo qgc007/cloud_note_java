@@ -2,6 +2,7 @@ package com.kebab.cloud_note_java.controller;
 
 import com.kebab.cloud_note_java.pojo.TbUser;
 import com.kebab.cloud_note_java.service.impl.TbUserServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
+@Slf4j
 public class IndexController {
 
     @Autowired
@@ -17,6 +19,7 @@ public class IndexController {
 
     @RequestMapping("/")
     public String index(Model model){
+        log.info("=== to page index ");
         model.addAttribute("name","spring");
         return "index";
     }
