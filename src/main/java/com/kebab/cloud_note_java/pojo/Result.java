@@ -1,5 +1,6 @@
 package com.kebab.cloud_note_java.pojo;
 
+import com.sun.net.httpserver.Authenticator;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,4 +16,5 @@ public class Result {
     public  static  enum  Code{
         OK, FAIL, ERROR
     }
+
 }

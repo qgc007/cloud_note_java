@@ -8,6 +8,9 @@ import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+
 /**
  * 
  * @TableName tb_user
@@ -24,6 +27,8 @@ public class TbUser implements Serializable {
     /**
      * 登录邮箱
      */
+    @NotEmpty(message = "邮箱不能为空")
+    @Email
     private String uMail;
 
     /**
