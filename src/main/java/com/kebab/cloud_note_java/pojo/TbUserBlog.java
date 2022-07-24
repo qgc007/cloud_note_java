@@ -6,9 +6,6 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
-
-import com.github.jeffreyning.mybatisplus.anno.MppMultiId;
-import com.github.jeffreyning.mybatisplus.conf.EnableMPP;
 import lombok.Data;
 
 /**
@@ -22,8 +19,7 @@ public class TbUserBlog implements Serializable {
      * user id
      */
     //@TableId(type = IdType.INPUT)
-    @MppMultiId
-    @TableField("u_id")
+    //@TableField("u_id")
     private Object uId;
 
     /**
